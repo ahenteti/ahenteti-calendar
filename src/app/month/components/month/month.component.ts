@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Month } from '../../models/month.model';
+import { Month, MONTH_ROWS } from '../../models/month.model';
 
 @Component({
   selector: 'app-month',
@@ -16,6 +16,6 @@ export class MonthComponent implements OnInit {
   month: Month;
 
   ngOnInit() {
-    this.month = new Month({ month: this.monthInt, year: this.year });
+    this.month = new Month({ month: this.monthInt, year: this.year, monthRows: MONTH_ROWS });
   }
 }

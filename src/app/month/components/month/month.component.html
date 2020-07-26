@@ -1,8 +1,16 @@
-<div class="day-label">Mon</div>
-<div class="day-label">Tue</div>
-<div class="day-label">Wed</div>
-<div class="day-label">Thu</div>
-<div class="day-label">Fri</div>
-<div class="day-label">Sat</div>
-<div class="day-label">Sun</div>
-<app-month-day *ngFor="let day of month.days" [day]="day"></app-month-day>
+<table>
+  <tr>
+    <th>Mon</th>
+    <th>Tue</th>
+    <th>Wed</th>
+    <th>Thu</th>
+    <th>Fri</th>
+    <th>Sat</th>
+    <th>Sun</th>
+  </tr>
+  <tr *ngFor="let entry of month.days | keyvalue">
+    <td *ngFor="let day of entry.value">
+      <app-month-day [day]="day"></app-month-day>
+    </td>
+  </tr>
+</table>
