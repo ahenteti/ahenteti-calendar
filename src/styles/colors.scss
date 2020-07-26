@@ -2,6 +2,7 @@
   // https://www.colorhexa.com/787878
   --white-color: white;
   --primary-color: #f57173;
+  --primary-color-transparent: #f5717333;
   --gray-color-00: #020202;
   --gray-color-01: #0c0c0c;
   --gray-color-02: #161616;
@@ -31,6 +32,7 @@
   --app-container-background-color: var(--white-color);
   --month-day-background-color: var(--app-container-background-color);
   --calendar-border-color: var(--gray-color-22);
-  --date-not-among-current-month-color: var(--gray-color-15);
-  --date-not-among-current-month-background-color: var(--gray-color-23);
+  --date-not-among-current-month-days-color: var(--gray-color-15);
+  --date-not-among-current-month-days-background-color: var(--gray-color-23);
+  --today-background-color: var(--primary-color-transparent);
 }

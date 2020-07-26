@@ -5,9 +5,13 @@
 .container {
   height: 100%;
 
-  &.not-among-current-month {
-    color: var(--date-not-among-current-month-color);
-    background-color: var(--date-not-among-current-month-background-color);
+  &.not-among-current-month-days {
+    color: var(--date-not-among-current-month-days-color);
+    background-color: var(--date-not-among-current-month-days-background-color);
+  }
+
+  &.today {
+    background-color: var(--today-background-color);
   }
 }
 

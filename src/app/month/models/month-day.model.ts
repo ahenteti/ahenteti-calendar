@@ -17,4 +17,9 @@ export class MonthDay extends Date {
   public isNotAmongDisplayedMonthDays(): boolean {
     return this.getMonth() !== this.displayedMonth;
   }
+
+  public isToday(): boolean {
+    const today = new Date();
+    return this.getFullYear() === today.getFullYear() && this.getMonth() === today.getMonth() && this.getDate() === today.getDate();
+  }
 }
