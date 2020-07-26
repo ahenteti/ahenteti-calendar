@@ -1,5 +1,7 @@
 :root {
   // https://www.colorhexa.com/787878
+  --white-color: white;
+  --primary-color: #f57173;
   --gray-color-00: #020202;
   --gray-color-01: #0c0c0c;
   --gray-color-02: #161616;
@@ -26,6 +28,7 @@
   --gray-color-23: #f8f8f8;
 
   --body-background-color: var(--gray-color-23);
-  --month-day-background-color: var(--gray-color-23);
+  --app-container-background-color: var(--white-color);
+  --month-day-background-color: var(--app-container-background-color);
   --calendar-border-color: var(--gray-color-22);
 }
