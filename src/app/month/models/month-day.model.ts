@@ -14,7 +14,7 @@ export class MonthDay extends Date {
     this.setFullYear(date.getFullYear(), date.getMonth(), date.getDate());
   }
 
-  public isAmongDisplayedMonthDays(): boolean {
-    return this.getMonth() === this.displayedMonth;
+  public isNotAmongDisplayedMonthDays(): boolean {
+    return this.getMonth() !== this.displayedMonth;
   }
 }

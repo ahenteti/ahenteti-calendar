@@ -1,3 +1,18 @@
 :host {
   display: block;
 }
+
+.container {
+  height: 100%;
+
+  &.not-among-current-month {
+    color: var(--date-not-among-current-month-color);
+    background-color: var(--date-not-among-current-month-background-color);
+  }
+}
+
+.date-number {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem 0.5rem 0 0;
+}

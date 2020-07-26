@@ -1,1 +1,3 @@
-{{ day.getDate() }}
+<div class="container" [ngClass]="{ 'not-among-current-month': day.isNotAmongDisplayedMonthDays() }">
+  <p class="date-number">{{ day.getDate() }}</p>
+</div>
