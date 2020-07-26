@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Month } from './month.model';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +6,5 @@ import { Month } from './month.model';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  ngOnInit(): void {
-    console.log(new Month());
-  }
+  ngOnInit(): void {}
 }
