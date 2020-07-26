@@ -1,4 +1,4 @@
-import { MonthDay, EDay } from './month-day.model';
+import { Day, EDay } from './day.model';
 
 export const MONTH_ROWS = 6;
 const WEEK_DAYS = 7;
@@ -6,7 +6,7 @@ const WEEK_DAYS = 7;
 export class Month {
   public year: number;
   public month: number;
-  public days: Map<number, MonthDay[]> = new Map();
+  public days: Map<number, Day[]> = new Map();
 
   public constructor(options?: MonthOptions) {
     const mergedOptions = { ...DefaultMonthOptions, ...options };
@@ -15,9 +15,9 @@ export class Month {
     let date = new Date(this.year, this.month, 1);
     date.setDate(date.getDate() - date.getDay() + mergedOptions.firstDay);
     for (let i = 0; i < mergedOptions.monthRows; i++) {
-      let days: MonthDay[] = [];
+      let days: Day[] = [];
       for (let i = 0; i < WEEK_DAYS; i++) {
-        days.push(new MonthDay(date, this.month));
+        days.push(new Day(date, this.month));
         date.setDate(date.getDate() + 1);
       }
       this.days.set(i, days);

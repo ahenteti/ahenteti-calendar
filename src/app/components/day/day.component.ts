@@ -1,15 +1,15 @@
 import { Component, Input, ElementRef, AfterViewChecked, HostListener } from '@angular/core';
-import { MonthDay } from '../../models/month-day.model';
 import { Renderer2 } from '@angular/core';
+import { Day } from '../../models/day.model';
 
 @Component({
-  selector: 'app-month-day',
-  templateUrl: 'month-day.component.html',
-  styleUrls: ['month-day.component.scss'],
+  selector: 'app-day',
+  templateUrl: 'day.component.html',
+  styleUrls: ['day.component.scss'],
 })
-export class MonthDayComponent implements AfterViewChecked {
+export class DayComponent implements AfterViewChecked {
   @Input()
-  day: MonthDay;
+  day: Day;
 
   constructor(private renderer: Renderer2, private elementRef: ElementRef) {}
 

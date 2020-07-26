@@ -1,4 +1,3 @@
-<app-month-header></app-month-header>
 <table>
   <tr>
     <th>Mon</th>
@@ -11,7 +10,7 @@
   </tr>
   <tr *ngFor="let entry of month.days | keyvalue">
     <td *ngFor="let day of entry.value">
-      <app-month-day [day]="day"></app-month-day>
+      <app-day [day]="day"></app-day>
     </td>
   </tr>
 </table>

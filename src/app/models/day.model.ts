@@ -8,7 +8,7 @@ export enum EDay {
   Sat = 6,
 }
 
-export class MonthDay extends Date {
+export class Day extends Date {
   public constructor(date: Date, private displayedMonth: number) {
     super(date);
     this.setFullYear(date.getFullYear(), date.getMonth(), date.getDate());
