@@ -1,3 +1,5 @@
+import * as moment from 'moment';
+
 export enum EDay {
   Sun = 0,
   Mon = 1,
@@ -21,5 +23,9 @@ export class Day extends Date {
   public isToday(): boolean {
     const today = new Date();
     return this.getFullYear() === today.getFullYear() && this.getMonth() === today.getMonth() && this.getDate() === today.getDate();
+  }
+
+  public format(format: string): string {
+    return moment(this).format(format);
   }
 }
