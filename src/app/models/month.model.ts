@@ -19,7 +19,7 @@ export class Month {
     for (let i = 0; i < mergedOptions.monthRows; i++) {
       let days: Day[] = [];
       for (let i = 0; i < WEEK_DAYS; i++) {
-        days.push(new Day(date, this.month));
+        days.push(new Day(date, this.firstDay.getMonth()));
         date.setDate(date.getDate() + 1);
       }
       this.days.set(i, days);
