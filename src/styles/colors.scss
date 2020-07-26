@@ -3,6 +3,7 @@
   --white-color: white;
   --primary-color: #f57173;
   --primary-color-transparent: #f5717333;
+  --secondary-color: #5a5ee7;
   --gray-color-00: #020202;
   --gray-color-01: #0c0c0c;
   --gray-color-02: #161616;
@@ -35,4 +36,7 @@
   --date-not-among-current-month-days-color: var(--gray-color-15);
   --date-not-among-current-month-days-background-color: var(--gray-color-23);
   --today-background-color: var(--primary-color-transparent);
+  --icon-color: var(--gray-color-13);
+  --user-action-icon-background-color: var(--gray-color-23);
+  --month-color: var(--secondary-color);
 }

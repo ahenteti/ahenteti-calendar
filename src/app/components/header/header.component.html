@@ -1,1 +1,16 @@
-<h1>Calendar app</h1>
+<div class="container">
+  <div class="buttons">
+    <span class="previous-button">
+      <span class="iconify user-action" data-icon="eva:arrow-ios-back-outline" data-inline="false"></span>
+    </span>
+    <span class="next-button">
+      <span class="iconify user-action" data-icon="eva:arrow-ios-forward-outline" data-inline="false"></span>
+    </span>
+  </div>
+  <span class="month">{{ month.firstDay | date: 'MMMM yyyy' }}</span>
+  <div class="buttons">
+    <span>
+      <span class="iconify user-action" data-icon="ic:round-add" data-inline="false"></span>
+    </span>
+  </div>
+</div>

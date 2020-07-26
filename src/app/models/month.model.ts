@@ -6,12 +6,14 @@ const WEEK_DAYS = 7;
 export class Month {
   public year: number;
   public month: number;
+  public firstDay: Date;
   public days: Map<number, Day[]> = new Map();
 
   public constructor(options?: MonthOptions) {
     const mergedOptions = { ...DefaultMonthOptions, ...options };
     this.year = mergedOptions.year;
     this.month = mergedOptions.month;
+    this.firstDay = new Date(this.year, this.month, 1);
     let date = new Date(this.year, this.month, 1);
     date.setDate(date.getDate() - date.getDay() + mergedOptions.firstDay);
     for (let i = 0; i < mergedOptions.monthRows; i++) {
