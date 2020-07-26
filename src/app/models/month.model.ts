@@ -25,13 +25,17 @@ export class Month {
       this.days.set(i, days);
     }
   }
+
+  incrementMonth(delta: number): Month {
+    return new Month({ year: this.year, month: this.month + delta });
+  }
 }
 
 export interface MonthOptions {
   year?: number;
   month?: number;
   firstDay?: EDay;
-  monthRows: number;
+  monthRows?: number;
 }
 
 const DefaultMonthOptions: MonthOptions = {

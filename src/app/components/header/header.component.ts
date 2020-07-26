@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Month } from 'src/app/models/month.model';
 
 @Component({
@@ -9,4 +9,11 @@ import { Month } from 'src/app/models/month.model';
 export class HeaderComponent {
   @Input()
   month: Month;
+
+  @Output('incrementMonth')
+  private _incrementMonth = new EventEmitter<number>();
+
+  incrementMonth(delta: number) {
+    this._incrementMonth.emit(delta);
+  }
 }

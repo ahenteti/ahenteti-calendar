@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Month } from './models/month.model';
 
 @Component({
@@ -6,7 +6,10 @@ import { Month } from './models/month.model';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   month: Month = new Month();
-  ngOnInit(): void {}
+
+  incrementMonth(delta: number) {
+    this.month = this.month.incrementMonth(delta);
+  }
 }

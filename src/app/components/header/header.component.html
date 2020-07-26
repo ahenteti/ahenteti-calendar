@@ -1,9 +1,9 @@
 <div class="container">
   <div class="buttons">
-    <span class="previous-button">
+    <span class="previous-button" (click)="incrementMonth(-1)">
       <span class="iconify user-action" data-icon="eva:arrow-ios-back-outline" data-inline="false"></span>
     </span>
-    <span class="next-button">
+    <span class="next-button" (click)="incrementMonth(1)">
       <span class="iconify user-action" data-icon="eva:arrow-ios-forward-outline" data-inline="false"></span>
     </span>
   </div>
