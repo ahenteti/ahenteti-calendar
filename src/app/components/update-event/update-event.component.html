@@ -1,0 +1,11 @@
+<input type="text" [(ngModel)]="event.summary" />
+<textarea [(ngModel)]="event.details"></textarea>
+<div class="buttons">
+  <div class="left">
+    <button (click)="deleteEvent()" class="outline">Delete</button>
+  </div>
+  <div class="right">
+    <button (click)="cancelUpdateEvent()" class="outline">Cancel</button>
+    <button (click)="validateUpdateEvent()">Update</button>
+  </div>
+</div>

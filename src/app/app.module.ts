@@ -9,11 +9,12 @@ import { DayComponent } from './components/day/day.component';
 import { HeaderComponent } from './components/header/header.component';
 import { IconButtonComponent } from './components/icon-button/icon-button.component';
 import { CreateEventComponent } from './components/create-event/create-event.component';
+import { UpdateEventComponent } from './components/update-event/update-event.component';
 import { DialogModule } from 'primeng/dialog';
 import { CalendarModule } from 'primeng/calendar';
 
 @NgModule({
-  declarations: [AppComponent, MonthComponent, DayComponent, HeaderComponent, IconButtonComponent, CreateEventComponent],
+  declarations: [AppComponent, MonthComponent, DayComponent, HeaderComponent, IconButtonComponent, CreateEventComponent, UpdateEventComponent],
   imports: [BrowserModule, BrowserAnimationsModule, DialogModule, FormsModule, CalendarModule],
   providers: [],
   bootstrap: [AppComponent],

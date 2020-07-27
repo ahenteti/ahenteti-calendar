@@ -46,7 +46,28 @@ export class AppComponent {
     this.hideCreateEventDialog();
   }
 
+  validateUpdateEvent(event) {
+    this.hideUpdateEventDialog();
+    this.storageService.updateEvent(event);
+    this.month = this.month.clone();
+  }
+
+  cancelUpdateEvent() {
+    this.hideUpdateEventDialog();
+  }
+
+  deleteEvent(event) {
+    console.log(event);
+    this.hideUpdateEventDialog();
+    this.storageService.deleteEvent(event);
+    this.month = this.month.clone();
+  }
+
   private hideCreateEventDialog() {
     this.createEventDialogVisibleAttribute = false;
+  }
+
+  private hideUpdateEventDialog() {
+    this.updateEventDialogVisibleAttribute = false;
   }
 }

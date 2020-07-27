@@ -10,9 +10,10 @@
   ></app-create-event>
 </p-dialog>
 <p-dialog header="Update event" [(visible)]="updateEventDialogVisibleAttribute" modal="true">
-  <app-create-event
-    (validateCreateEvent)="validateCreateEvent($event)"
-    (cancelCreateEvent)="cancelCreateEvent()"
+  <app-update-event
+    (validateUpdateEvent)="validateUpdateEvent($event)"
+    (cancelUpdateEvent)="cancelUpdateEvent()"
+    (deleteEvent)="deleteEvent($event)"
     [event]="eventToUpdate"
-  ></app-create-event>
+  ></app-update-event>
 </p-dialog>
