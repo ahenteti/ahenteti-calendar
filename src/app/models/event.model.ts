@@ -1,11 +1,13 @@
+import { Day } from './day.model';
+
 export interface Event {
   summary: string;
   details: string;
   createdAt: Date;
-  date: Date;
+  date: Day;
 }
 
-export const createNewEvent = (date: Date = new Date()): Event => {
+export const createNewEvent = (date: Day = new Day(new Date())): Event => {
   return {
     summary: '',
     details: '',

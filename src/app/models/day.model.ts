@@ -11,7 +11,7 @@ export enum EDay {
 }
 
 export class Day extends Date {
-  public constructor(date: Date, private displayedMonth: number) {
+  public constructor(date: Date, private displayedMonth: number = date.getMonth()) {
     super(date);
     this.setFullYear(date.getFullYear(), date.getMonth(), date.getDate());
   }

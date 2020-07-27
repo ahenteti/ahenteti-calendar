@@ -34,6 +34,10 @@ export class Month {
     return new Month({ year: new Date().getFullYear(), month: new Date().getMonth() });
   }
 
+  clone(): Month {
+    return new Month({ year: this.year, month: this.month });
+  }
+
   isCurrentMonth(): boolean {
     const today = new Date();
     return this.year === today.getFullYear() && this.month === today.getMonth();

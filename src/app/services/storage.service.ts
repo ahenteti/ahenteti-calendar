@@ -13,8 +13,10 @@ export class StorageService {
     return JSON.parse(localStorage.getItem(this.getLocalStorageKey(date)) || '[]');
   }
 
-  saveEvents(date: Day, tasks: Event[]) {
-    localStorage.setItem(this.getLocalStorageKey(date), JSON.stringify(tasks));
+  addEvent(event: Event) {
+    const events = this.loadEvents(event.date);
+    events.push(event);
+    localStorage.setItem(this.getLocalStorageKey(event.date), JSON.stringify(events));
   }
 
   private getLocalStorageKey(date: Day) {

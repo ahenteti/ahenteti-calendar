@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Month } from './models/month.model';
 import { Day } from './models/day.model';
 import { Event, createNewEvent } from './models/event.model';
+import { StorageService } from './services/storage.service';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,8 @@ export class AppComponent {
   month: Month = new Month();
   createEventDialogVisibleAttribute: boolean = false;
   eventToCreate: Event = createNewEvent();
+
+  constructor(private storageService: StorageService) {}
 
   incrementMonth(delta: number) {
     this.month = this.month.incrementMonth(delta);
@@ -28,7 +31,8 @@ export class AppComponent {
 
   validateCreateEvent(event) {
     this.hideCreateEventDialog();
-    console.log(event);
+    this.storageService.addEvent(event);
+    this.month = this.month.clone();
   }
 
   cancelCreateEvent() {
