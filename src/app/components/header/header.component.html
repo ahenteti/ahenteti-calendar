@@ -1,17 +1,11 @@
 <div class="container">
   <span class="buttons">
-    <span class="icon previous-button" (click)="incrementMonth(-1)">
-      <span class="iconify user-action" data-icon="eva:arrow-ios-back-outline" data-inline="false"></span>
-    </span>
-    <span class="icon next-button" (click)="incrementMonth(1)">
-      <span class="iconify user-action" data-icon="eva:arrow-ios-forward-outline" data-inline="false"></span>
-    </span>
+    <app-icon-button class="icon previous-button" (click)="incrementMonth(-1)" icon="eva:arrow-ios-back-outline"></app-icon-button>
+    <app-icon-button class="icon next-button" (click)="incrementMonth(1)" icon="eva:arrow-ios-forward-outline"></app-icon-button>
   </span>
   <span class="month">{{ month.firstDay | date: 'MMMM yyyy' }}</span>
   <span class="buttons">
     <span (click)="setToday()" class="current-month-button" [ngClass]="{ 'current-month': month.isCurrentMonth() }">Today</span>
-    <span class="icon">
-      <span class="iconify user-action" data-icon="ic:round-add" data-inline="false"></span>
-    </span>
+    <app-icon-button icon="ic:round-add"></app-icon-button>
   </span>
 </div>

@@ -15,12 +15,12 @@
 
 .current-month-button {
   margin-right: 1rem;
-  background: var(--gray-color-23);
+  background: var(--icon-button-background-color);
   padding: 0 1rem;
   border-radius: 0.3rem;
   font-size: 1.3rem;
-  height: 3.5rem;
-  line-height: 3.5rem;
+  height: var(--icon-button-height);
+  line-height: var(--icon-button-height);
   cursor: pointer;
   transition: var(--transition);
   transition-property: color, background-color;
