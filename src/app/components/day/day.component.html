@@ -2,6 +2,6 @@
   <app-icon-button (click)="createEvent()" icon="ic:round-add"></app-icon-button>
   <p class="date-number">{{ day.getDate() }}</p>
   <ul>
-    <li class="event" *ngFor="let event of events">{{ event.summary }}</li>
+    <li class="event" (click)="updateEvent(event)" *ngFor="let event of events">{{ event.summary }}</li>
   </ul>
 </div>

@@ -10,7 +10,7 @@
   </tr>
   <tr *ngFor="let entry of month.days | keyvalue">
     <td *ngFor="let day of entry.value">
-      <app-day (createEvent)="createEvent($event)" [day]="day"></app-day>
+      <app-day (createEvent)="createEvent($event)" (updateEvent)="updateEvent($event)" [day]="day"></app-day>
     </td>
   </tr>
 </table>

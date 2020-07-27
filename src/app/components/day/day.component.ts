@@ -14,6 +14,8 @@ export class DayComponent implements AfterViewChecked, OnInit {
   day: Day;
   @Output('createEvent')
   private _createEvent = new EventEmitter<Day>();
+  @Output('updateEvent')
+  private _updateEvent = new EventEmitter<Event>();
   events: Event[];
 
   constructor(private renderer: Renderer2, private elementRef: ElementRef, private storageService: StorageService) {}
@@ -38,5 +40,9 @@ export class DayComponent implements AfterViewChecked, OnInit {
 
   createEvent() {
     this._createEvent.emit(this.day);
+  }
+
+  updateEvent(event: Event) {
+    this._updateEvent.emit(event);
   }
 }

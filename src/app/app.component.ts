@@ -12,7 +12,9 @@ import { StorageService } from './services/storage.service';
 export class AppComponent {
   month: Month = new Month();
   createEventDialogVisibleAttribute: boolean = false;
+  updateEventDialogVisibleAttribute: boolean = false;
   eventToCreate: Event = createNewEvent();
+  eventToUpdate: Event = createNewEvent();
 
   constructor(private storageService: StorageService) {}
 
@@ -27,6 +29,11 @@ export class AppComponent {
   createEvent(day: Day) {
     this.createEventDialogVisibleAttribute = true;
     this.eventToCreate = createNewEvent(day);
+  }
+
+  updateEvent(event: Event) {
+    this.updateEventDialogVisibleAttribute = true;
+    this.eventToUpdate = event;
   }
 
   validateCreateEvent(event) {
