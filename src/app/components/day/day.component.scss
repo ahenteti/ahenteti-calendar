@@ -36,3 +36,23 @@ app-icon-button {
   left: 0.4rem;
   visibility: hidden;
 }
+
+.event {
+  padding: 0.2rem 0.4rem;
+  font-size: 1.15rem;
+  border-radius: 0.3rem;
+  background-color: var(--secondary-color);
+  color: white;
+  margin: 0.2rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
