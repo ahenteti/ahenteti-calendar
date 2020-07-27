@@ -6,6 +6,5 @@
   <span class="month">{{ month.firstDay | date: 'MMMM yyyy' }}</span>
   <span class="buttons">
     <span (click)="setToday()" class="current-month-button" [ngClass]="{ 'current-month': month.isCurrentMonth() }">Today</span>
-    <app-icon-button icon="ic:round-add"></app-icon-button>
   </span>
 </div>

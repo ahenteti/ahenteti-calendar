@@ -1,0 +1,21 @@
+:host > * {
+  margin-bottom: 2rem;
+
+  &:first-child {
+    margin-top: 1.5rem;
+  }
+
+  &:last-child {
+    margin-top: 1.5rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  & button {
+    margin-left: 1rem;
+  }
+}

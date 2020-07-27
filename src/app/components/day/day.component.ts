@@ -1,4 +1,4 @@
-import { Component, Input, ElementRef, AfterViewChecked, HostListener } from '@angular/core';
+import { Component, Input, ElementRef, AfterViewChecked, HostListener, Output, EventEmitter } from '@angular/core';
 import { Renderer2 } from '@angular/core';
 import { Day } from '../../models/day.model';
 
@@ -10,6 +10,9 @@ import { Day } from '../../models/day.model';
 export class DayComponent implements AfterViewChecked {
   @Input()
   day: Day;
+
+  @Output('createEvent')
+  private _createEvent = new EventEmitter<Day>();
 
   constructor(private renderer: Renderer2, private elementRef: ElementRef) {}
 
@@ -25,5 +28,9 @@ export class DayComponent implements AfterViewChecked {
   private setElementHeight() {
     const height = this.elementRef.nativeElement.getBoundingClientRect().width;
     this.renderer.setStyle(this.elementRef.nativeElement, 'height', height + 'px');
+  }
+
+  createEvent() {
+    this._createEvent.emit(this.day);
   }
 }

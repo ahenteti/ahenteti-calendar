@@ -1,3 +1,4 @@
 <div class="container" [ngClass]="{ 'not-among-current-month-days': day.isNotAmongDisplayedMonthDays(), today: day.isToday() }">
+  <app-icon-button (click)="createEvent()" icon="ic:round-add"></app-icon-button>
   <p class="date-number">{{ day.getDate() }}</p>
 </div>

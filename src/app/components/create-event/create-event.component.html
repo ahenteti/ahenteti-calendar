@@ -1,0 +1,6 @@
+<input type="text" placeholder="event summary" [(ngModel)]="event.summary" />
+<textarea placeholder="event details" [(ngModel)]="event.details"></textarea>
+<div class="buttons">
+  <button (click)="cancelCreateEvent()" class="outline">Cancel</button>
+  <button (click)="validateCreateEvent()">Create</button>
+</div>

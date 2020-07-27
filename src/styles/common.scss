@@ -1,4 +1,5 @@
 :root {
+  --transition: all 200ms ease-in;
   --icon-button-height: 3.5rem;
   @media screen and (max-width: 480px) {
     --font-size: 45%;
@@ -31,4 +32,51 @@ body {
 
 * {
   font-size: 1.6rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-family: inherit;
+  color: var(--text-color);
+  background-color: var(--input-background-color);
+  border: none;
+  border-bottom: 2px solid var(--input-border-color);
+  border-radius: 0.3rem;
+  transition: var(--transition);
+  transition-property: border-color;
+
+  &:hover,
+  &:focus {
+    border-color: var(--input-border-color-on-hover);
+  }
+}
+
+button {
+  color: white;
+  background: var(--primary-color);
+  border: none;
+  outline: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.3rem;
+  transition: var(--transition);
+  transition-property: color, background-color;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--primary-color-light);
+  }
+
+  &.outline {
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+    color: var(--primary-color);
+
+    &:hover {
+      background-color: inherit;
+    }
+  }
 }

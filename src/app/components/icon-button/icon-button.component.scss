@@ -7,7 +7,7 @@
   color: var(--icon-button-color);
   background: var(--icon-button-background-color);
   border-radius: 0.3rem;
-  padding: 0.5rem;
+  padding: var(--icon-button-padding, 0.5rem);
   font-size: var(--icon-button-height);
   &:hover {
     color: var(--primary-color);

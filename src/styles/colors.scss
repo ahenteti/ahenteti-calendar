@@ -2,6 +2,7 @@
   // https://www.colorhexa.com/787878
   --white-color: white;
   --primary-color: #f57173;
+  --primary-color-light: #f57173bb;
   --secondary-color: #5a5ee7;
   --gray-color-00: #020202;
   --gray-color-01: #0c0c0c;
@@ -38,4 +39,7 @@
   --icon-button-background-color: var(--gray-color-23);
   --month-color: var(--secondary-color);
   --text-color: var(--gray-color-13);
+  --input-border-color: var(--gray-color-22);
+  --input-border-color-on-hover: var(--primary-color);
+  --input-background-color: var(--gray-color-23);
 }
