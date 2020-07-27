@@ -12,4 +12,8 @@ export class AppComponent {
   incrementMonth(delta: number) {
     this.month = this.month.incrementMonth(delta);
   }
+
+  setToday() {
+    this.month = this.month.toToday();
+  }
 }

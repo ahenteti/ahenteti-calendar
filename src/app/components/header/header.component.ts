@@ -13,7 +13,14 @@ export class HeaderComponent {
   @Output('incrementMonth')
   private _incrementMonth = new EventEmitter<number>();
 
+  @Output('setToday')
+  private _setToday = new EventEmitter<void>();
+
   incrementMonth(delta: number) {
     this._incrementMonth.emit(delta);
+  }
+
+  setToday() {
+    this._setToday.emit();
   }
 }

@@ -29,6 +29,15 @@ export class Month {
   incrementMonth(delta: number): Month {
     return new Month({ year: this.year, month: this.month + delta });
   }
+
+  toToday(): Month {
+    return new Month({ year: new Date().getFullYear(), month: new Date().getMonth() });
+  }
+
+  isCurrentMonth(): boolean {
+    const today = new Date();
+    return this.year === today.getFullYear() && this.month === today.getMonth();
+  }
 }
 
 export interface MonthOptions {

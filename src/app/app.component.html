@@ -1,4 +1,4 @@
 <div class="container">
-  <app-header [month]="month" (incrementMonth)="incrementMonth($event)"></app-header>
+  <app-header [month]="month" (incrementMonth)="incrementMonth($event)" (setToday)="setToday()"></app-header>
   <app-month [month]="month"></app-month>
 </div>
